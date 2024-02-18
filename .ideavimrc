@@ -11,7 +11,8 @@ set incsearch
 map<C-u> <C-u>zz
 map<C-d> <C-d>zz
 
-
+"" Menu
+map <leader>ss <Action>(ShowSettings)
 
 "" Searching
 map <leader>ff <Action>(SearchEverywhere)
@@ -36,6 +37,7 @@ map<leader>wc <Action>(ActivateCommitToolWindow)
 map<leader>wh <Action>(HideActiveWindow)
 map<leader>ww <Action>(HideAllWindows)
 
+
 "" Popups
 map<leader>ps <Action>(FileStructurePopup)
 
@@ -45,8 +47,13 @@ map<leader>gm <Action>(Git.Merge)
 map<leader>ga <Action>(Git.Add)
 map<leader>pr <Action>(Github.Create.Pull.Request)
 
-map<leader>tw <Action>(CloseActiveTab)
-map<leader>hh <Action>(EditorPreviousWord)
+map<leader>tw <Action>(CloseAllEditors)
+map<leader>tt <Action>(CloseAllEditorsButActive)
+map <leader>tv <Action>(SplitVertically)
+map <C-h> <Action>(PreviousTab)
+map <C-l> <Action>(NextTab)
+map <C-j> <Action>(NextWindow)
+map <C-k> <Action>(PreviousWindow)
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
