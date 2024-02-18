@@ -1,0 +1,52 @@
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+let mapleader = " "
+
+set scrolloff=5
+set incsearch
+
+map<C-u> <C-u>zz
+map<C-d> <C-d>zz
+
+
+
+"" Searching
+map <leader>ff <Action>(SearchEverywhere)
+map <leader>fg <Action>(FindInPath)
+
+"" Code actions
+map <leader>fm <Action>(ReformatCode)
+map <leader>rn <Action>(RenameElement)
+map <leader>as <Action>(ShowIntentionActions)
+
+"" Clipboard
+map <leader>cp <Action>($Copy)
+map <leader>pp <Action>($Paste)
+map<leader>ct <Action>($Cut)
+
+"" Windows
+map<leader>wp <Action>(ActivateProjectToolWindow)
+map<leader>wr <Action>(ActivateRunToolWindow)
+map<leader>ws <Action>(ActivateStructureToolWindow)
+map<leader>wt <Action>(ActivateTerminalToolWindow)
+map<leader>wc <Action>(ActivateCommitToolWindow)
+map<leader>wh <Action>(HideActiveWindow)
+map<leader>ww <Action>(HideAllWindows)
+
+"" Popups
+map<leader>ps <Action>(FileStructurePopup)
+
+map<leader>gb <Action>(Git.Branches)
+map<leader>gp <Action>(Git.Pull)
+map<leader>gm <Action>(Git.Merge)
+map<leader>ga <Action>(Git.Add)
+map<leader>pr <Action>(Github.Create.Pull.Request)
+
+map<leader>tw <Action>(CloseActiveTab)
+map<leader>hh <Action>(EditorPreviousWord)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
