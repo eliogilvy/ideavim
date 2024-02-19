@@ -2,6 +2,7 @@
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
 
 let mapleader = " "
 
@@ -29,12 +30,12 @@ map <leader>pp <Action>($Paste)
 map<leader>ct <Action>($Cut)
 
 "" Windows
-map<leader>wp <Action>(ActivateProjectToolWindow)
+map<leader>wp :NERDTree<CR>
 map<leader>wr <Action>(ActivateRunToolWindow)
 map<leader>ws <Action>(ActivateStructureToolWindow)
 map<leader>wt <Action>(ActivateTerminalToolWindow)
 map<leader>wc <Action>(ActivateCommitToolWindow)
-map<leader>wh <Action>(HideActiveWindow)
+map<leader>wa <Action>(HideActiveWindow)
 map<leader>ww <Action>(HideAllWindows)
 
 
@@ -46,9 +47,10 @@ map<leader>gp <Action>(Git.Pull)
 map<leader>gm <Action>(Git.Merge)
 map<leader>ga <Action>(Git.Add)
 map<leader>pr <Action>(Github.Create.Pull.Request)
+map<leader>gh <Action>(Vcs.Push)
 
-map<leader>tw <Action>(CloseAllEditors)
-map<leader>tt <Action>(CloseAllEditorsButActive)
+map<leader>tw <Action>(CloseAllEditorsButActive)
+map<leader>ta <Action>(CloseEditor)
 map <leader>tv <Action>(SplitVertically)
 map <C-h> <Action>(PreviousTab)
 map <C-l> <Action>(NextTab)
